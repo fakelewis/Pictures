@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Solenidade de Conclusão - Saúde com Agente</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Work+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-primary-container": "#718bb9",
+                        "tertiary-container": "#212425",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "surface-dim": "#dcd9d9",
+                        "primary-fixed-dim": "#adc7f8",
+                        "on-tertiary-fixed": "#191c1d",
+                        "primary-fixed": "#d6e3ff",
+                        "outline": "#74777f",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-surface-variant": "#43474e",
+                        "secondary": "#775a19",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary-fixed": "#261900",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "secondary-fixed": "#ffdea5",
+                        "surface-container": "#f0eded",
+                        "inverse-primary": "#adc7f8",
+                        "tertiary-fixed": "#e1e3e4",
+                        "outline-variant": "#c4c6d0",
+                        "primary-container": "#00234b",
+                        "surface-container-high": "#eae7e7",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#0c0e0f",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fcf9f8",
+                        "secondary-container": "#fed488",
+                        "surface-tint": "#455f8a",
+                        "on-secondary-container": "#785a1a",
+                        "on-primary-fixed-variant": "#2c4771",
+                        "primary": "#000e24",
+                        "on-background": "#1c1b1b",
+                        "on-primary-fixed": "#001b3d",
+                        "on-tertiary-container": "#898b8c",
+                        "secondary-fixed-dim": "#e9c176",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-variant": "#e5e2e1",
+                        "inverse-surface": "#313030",
+                        "background": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#454748"
+                    },
+
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+
+                    spacing: {
+                        "margin-mobile": "24px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "stack-lg": "48px",
+                        "stack-md": "32px",
+                        "margin-desktop": "80px"
+                    },
+
+                    fontFamily: {
+                        "body-md": ["Work Sans"],
+                        "label-caps": ["Work Sans"],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "display-lg": ["Source Serif 4"],
+                        "headline-lg": ["Source Serif 4"],
+                        "headline-lg-mobile": ["Source Serif 4"],
+                        "body-lg": ["Work Sans"]
+                    },
+
+                    fontSize: {
+                        "body-md": [
+                            "18px",
+                            {
+                                lineHeight: "28px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "label-caps": [
+                            "14px",
+                            {
+                                lineHeight: "20px",
+                                letterSpacing: "0.1em",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "headline-md": [
+                            "36px",
+                            {
+                                lineHeight: "44px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "display-lg": [
+                            "72px",
+                            {
+                                lineHeight: "80px",
+                                letterSpacing: "-0.02em",
+                                fontWeight: "700"
+                            }
+                        ],
+
+                        "headline-lg": [
+                            "48px",
+                            {
+                                lineHeight: "56px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "headline-lg-mobile": [
+                            "32px",
+                            {
+                                lineHeight: "40px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "body-lg": [
+                            "24px",
+                            {
+                                lineHeight: "36px",
+                                fontWeight: "400"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .aspect-widescreen {
+            aspect-ratio: 16 / 9;
+        }
+
+        .bg-pattern {
+            background-image:
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(255, 222, 165, 0.05) 0%,
+                    transparent 20%
+                ),
+                radial-gradient(
+                    circle at 90% 80%,
+                    rgba(255, 222, 165, 0.05) 0%,
+                    transparent 20%
+                );
+        }
+
+        /* =========================
+           MOLDURA SVG
+           ========================= */
+
+        .moldura {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+
+            pointer-events: none;
+            z-index: 30;
+        }
+
+        .moldura-superior-esquerda {
+            top: 20px;
+            left: 20px;
+            transform: rotate(90deg);
+        }
+
+        .moldura-superior-direita {
+            top: 20px;
+            right: 20px;
+            transform: rotate(180deg);
+        }
+
+        .moldura-inferior-direita {
+            right: 20px;
+            bottom: 20px;
+            transform: rotate(-90deg);
+        }
+
+        .moldura-inferior-esquerda {
+            left: 20px;
+            bottom: 20px;
+        }
+
+        /* =========================
+           TRANSIÇÃO DO FORMANDO
+           ========================= */
+
+        .conteudo-formando {
+            transition: opacity 180ms ease, transform 180ms ease;
+        }
+
+        .conteudo-formando.trocando {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+
+        .nome-formando {
+            font-family: "Source Serif 4";
+            font-size: 72px;
+            line-height: 88px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+    </style>
+</head>
+
+
+<body class="bg-surface text-on-surface flex items-center justify-center min-h-screen p-4">
+
+    <!-- Projection Canvas -->
+
+    <main
+        class="w-full max-w-[1920px] aspect-widescreen bg-primary relative overflow-hidden flex flex-col justify-between shadow-2xl rounded-xl border-4 border-secondary-fixed/20"
+    >
+
+        <!-- =====================================================
+             MOLDURA
+             ===================================================== -->
+
+        <img
+            class="moldura moldura-superior-esquerda"
+            src="Moldura.svg"
+            alt=""
+        >
+
+        <img
+            class="moldura moldura-superior-direita"
+            src="Moldura.svg"
+            alt=""
+        >
+
+        <img
+            class="moldura moldura-inferior-direita"
+            src="Moldura.svg"
+            alt=""
+        >
+
+        <img
+            class="moldura moldura-inferior-esquerda"
+            src="Moldura.svg"
+            alt=""
+        >
+
+
+        <!-- =====================================================
+             BACKGROUND
+             ===================================================== -->
+
+        <div class="absolute inset-0 bg-pattern pointer-events-none"></div>
+
+        <div
+            class="absolute -bottom-[20%] -left-[10%] w-[50%] aspect-square rounded-full bg-primary-container opacity-50 blur-3xl"
+        ></div>
+
+        <div
+            class="absolute -top-[20%] -right-[10%] w-[50%] aspect-square rounded-full bg-primary-container opacity-50 blur-3xl"
+        ></div>
+
+
+        <!-- =====================================================
+             HEADER
+             ===================================================== -->
+
+        <header
+            class="w-full pt-margin-desktop px-margin-desktop text-center relative z-10 flex flex-col items-center gap-unit"
+        >
+
+            <h1 class="font-label-caps text-label-caps text-on-primary tracking-widest uppercase">
+                SOLENIDADE DE CONCLUSÃO DA 2ª TURMA
+            </h1>
+
+            <h2 class="font-headline-md text-headline-md text-secondary-fixed">
+                DO CURSO SAÚDE COM AGENTE
+            </h2>
+
+        </header>
+
+
+        <!-- =====================================================
+             MAIN CONTENT
+             ===================================================== -->
+
+        <section
+            class="flex-1 flex items-center justify-center px-margin-desktop z-10 w-full relative"
+        >
+
+            <div
+                id="conteudo-formando"
+                class="conteudo-formando w-full max-w-6xl flex items-center justify-center gap-24"
+            >
+
+                <!-- ==============================
+                     FOTO
+                     ============================== -->
+
+                <div
+                    class="w-[500px] h-[500px] flex-shrink-0 bg-surface rounded-lg p-2 shadow-xl border-2 border-secondary-fixed/50"
+                >
+
+                    <img
+                        id="foto-formando"
+                        class="w-full h-full object-cover rounded object-center"
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
+
+                <!-- ==============================
+                     INFORMAÇÕES
+                     ============================== -->
+
+                <div class="flex flex-col gap-6 max-w-2xl">
+
+                    <!-- Decorative Line -->
+
+                    <div class="flex items-center gap-4 w-full">
+
+                        <div
+                            class="w-3 h-3 rounded-full bg-secondary-fixed shadow-[0_0_10px_rgba(255,222,165,0.8)]"
+                        ></div>
+
+                        <div
+                            class="h-0.5 bg-gradient-to-r from-secondary-fixed to-transparent flex-1"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- Nome -->
+
+                    <div class="flex flex-col gap-2">
+
+                        <h3
+                            id="nome-formando"
+                            class="nome-formando font-headline-md text-on-primary uppercase"
+                        ></h3>
+
+                        <p
+                            id="cargo-formando"
+                            class="font-headline-md text-headline-md text-secondary-fixed"
+                        ></p>
+
+                    </div>
+
+
+                    <!-- Ano -->
+
+                    <div class="flex items-center gap-4 mt-4 w-full">
+
+    <!-- Linha esquerda -->
+    <div class="flex items-center gap-4 flex-1">
+        <div
+            class="h-0.5 bg-gradient-to-r from-transparent to-secondary-fixed flex-1"
+        ></div>
+
+        <div
+            class="w-3 h-3 rounded-full bg-secondary-fixed shadow-[0_0_10px_rgba(255,222,165,0.8)]"
+        ></div>
+    </div>
+
+
+    <!-- Ano -->
+        <span
+            id="ano-formando"
+            class="font-headline-md text-headline-md text-secondary-fixed"
+        >
+            2026
+        </span>
+
+
+    <!-- Linha direita -->
+    <div class="flex items-center gap-4 flex-1">
+
+        <div
+            class="w-3 h-3 rounded-full bg-secondary-fixed shadow-[0_0_10px_rgba(255,222,165,0.8)]"
+        ></div>
+
+        <div
+            class="h-0.5 bg-gradient-to-r from-secondary-fixed to-transparent flex-1"
+        ></div>
+
+    </div>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOOTER
+             ===================================================== -->
+
+        <footer
+            class="w-full pb-margin-desktop px-margin-desktop text-center relative z-10"
+        >
+
+            <p class="font-label-caps text-label-caps text-on-primary/60 tracking-[0.2em] uppercase">
+                SAÚDE COM AGENTE
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================================
+         DADOS DOS FORMANDOS
+         ========================================================= -->
+
+    <script>
+
+        const formandos = [
+
+            // =================================================
+            // ACE
+            // =================================================
+
+            {
+                nome: "ADRIANO MAGALHÃES GOMES",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/ADRIANO MAGALHÃES GOMES.jpg"
+            },
+            {
+                nome: "AIRTON SOTERO DE BRITO",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/AIRTON SOTERO DE BRITO.jpg"
+            },
+            {
+                nome: "CHARLES PEREIRA DE OLIVEIRA",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/CHARLES PEREIRA DE OLIVEIRA.jpg"
+            },
+            {
+                nome: "DELMA DA FROTA E SILVA",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/DELMA DA FROTA E SILVA.jpg"
+            },
+            {
+                nome: "FRANCINEIDE MATIAS DOS SANTOS",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/FRANCINEIDE MATIAS DOS SANTOS.jpg"
+            },
+            {
+                nome: "FRANCISCO CHARLES FERREIRA DA SILVA",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/FRANCISCO CHARLES FERREIRA DA SILVA.jpg"
+            },
+            {
+                nome: "FRANCISCO DENIS ARAUJO LIMA",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/FRANCISCO DENIS ARAUJO LIMA.jpg"
+            },
+            {
+                nome: "FRANCISCO GILSON FERREIRA DOS SANTOS",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/FRANCISCO GILSON FERREIRA DOS SANTOS.jpg"
+            },
+            {
+                nome: "FRANCISCO GILVAN CRUZ DO NASCIMENTO",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/FRANCISCO GILVAN CRUZ DO NASCIMENTO.jpg"
+            },
+            {
+                nome: "FRANCISCO OLIMAR SOUSA",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/FRANCISCO OLIMAR SOUSA.jpg"
+            },
+            {
+                nome: "IVO DELMIRO DA SILVA",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/IVO DELMIRO DA SILVA.jpg"
+            },
+            {
+                nome: "JOÃO BATISTA MONTEIRO",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/JOÃO BATISTA MONTEIRO.jpg"
+            },
+            {
+                nome: "Maria Olinda Mendes de Queiroz",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/Maria Olinda Mendes de Queiroz.jpg"
+            },
+            {
+                nome: "ODILIO FREIRE DE MENEZES FILHO",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/ODILIO FREIRE DE MENEZES FILHO.jpg"
+            },
+            {
+                nome: "PAULO SERGIO DA SILVA",
+                categoria: "ACE",
+                cargo: "Agente de Combate a Endemias",
+                foto: "fotos/ACE/PAULO SERGIO DA SILVA.jpg"
+            },
+
+
+            // =================================================
+            // ACS
+            // =================================================
+
+            {
+                nome: "ADELI RODRIGUES FONTENELE ROCHA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/ADELI RODRIGUES FONTENELE ROCHA.jpg"
+            },
+            {
+                nome: "ANA ILSA CAPISTRANO DA SILVA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/ANA ILSA CAPISTRANO DA SILVA.jpg"
+            },
+            {
+                nome: "ANTONIA FERREIRA LIMA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/ANTONIA FERREIRA LIMA.jpg"
+            },
+            {
+                nome: "ANTONIA MARQUES DE SOUSA SILVA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/ANTONIA MARQUES DE SOUSA SILVA.jpg"
+            },
+            {
+                nome: "AYRTON SENNA RICARDO MONTEIRO",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/AYRTON SENNA RICARDO MONTEIRO.jpg"
+            },
+            {
+                nome: "BIANCA BRANDÃO DA SILVA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/BIANCA BRANDÃO DA SILVA.jpg"
+            },
+            {
+                nome: "CLAUDIA MARIA DE SOUSA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/CLAUDIA MARIA DE SOUSA.jpg"
+            },
+            {
+                nome: "DIVA FERREIRA INACIO",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/DIVA FERREIRA INACIO.jpg"
+            },
+            {
+                nome: "EDILANE DOS SANTOS DE SOUSA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/EDILANE DOS SANTOS DE SOUSA.jpg"
+            },
+            {
+                nome: "ELIANE ALVES DA SILVA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/ELIANE ALVES DA SILVA.jpg"
+            },
+            {
+                nome: "ELIZABETH DOMINGOS ALVES",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/ELIZABETH DOMINGOS ALVES.jpg"
+            },
+            {
+                nome: "ENITA MARIA DA SILVA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/ENITA MARIA DA SILVA.jpg"
+            },
+            {
+                nome: "FRANCISCA FERNANDA PASSOS DE SOUSA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/FRANCISCA FERNANDA PASSOS DE SOUSA.jpg"
+            },
+            {
+                nome: "FRANCISCA LUCINEIDE PAIVA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/FRANCISCA LUCINEIDE PAIVA.jpg"
+            },
+            {
+                nome: "FRANCISCA MONALIZA PEREIRA BRANDÃO",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/FRANCISCA MONALIZA PEREIRA BRANDÃO.jpg"
+            },
+            {
+                nome: "FRANCISCO ANDERSON SILVA DOURADO",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/FRANCISCO ANDERSON SILVA DOURADO.jpg"
+            },
+            {
+                nome: "FRANCISCO ARAUJO RODRIGUES",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/FRANCISCO ARAUJO RODRIGUES.jpg"
+            },
+            {
+                nome: "FRANCISCO PEDRO TEIXEIRA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/FRANCISCO PEDRO TEIXEIRA.jpg"
+            },
+            {
+                nome: "FRANCISCO SIDINEI MARQUES DE PAIVA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/FRANCISCO SIDINEI MARQUES DE PAIVA.jpg"
+            },
+            {
+                nome: "INOCENCIA MARIA RODRIGUES",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/INOCENCIA MARIA RODRIGUES.jpg"
+            },
+            {
+                nome: "IRINEUDA MARQUES DE SOUSA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/IRINEUDA MARQUES DE SOUSA.jpg"
+            },
+            {
+                nome: "JANICE RODRIGUES DOS SANTOS",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/JANICE RODRIGUES DOS SANTOS.jpg"
+            },
+            {
+                nome: "JOANA OLIANDA MARQUES",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/JOANA OLIANDA MARQUES.jpg"
+            },
+            {
+                nome: "JOSÉ RIBAMAR DE OLIVEIRA JÚNIOR",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/JOSÉ RIBAMAR DE OLIVEIRA JÚNIOR.jpg"
+            },
+            {
+                nome: "LINCOLN CESAR BEZERRA ARRAIS",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/LINCOLN CESAR BEZERRA ARRAIS.jpg"
+            },
+            {
+                nome: "MARCIANE DA SILVA FELIX",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/MARCIANE DA SILVA FELIX.jpg"
+            },
+            {
+                nome: "MARIA CONCEIÇÃO DE SOUSA MARQUES",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/MARIA CONCEIÇÃO DE SOUSA MARQUES.jpg"
+            },
+            {
+                nome: "MARIA CREUZA DE LIMA FRAÇA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/MARIA CREUZA DE LIMA FRAÇA.jpg"
+            },
+            {
+                nome: "MARIA EDINETE RODRIGUES CUSTODIO",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/MARIA EDINETE RODRIGUES CUSTODIO.jpg"
+            },
+            {
+                nome: "MARIA EZENI MARQUES DE PAIVA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/MARIA EZENI MARQUES DE PAIVA.jpg"
+            },
+            {
+                nome: "MARIA NILA DOS SANTOS LIMA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/MARIA NILA DOS SANTOS LIMA.jpg"
+            },
+            {
+                nome: "MILENE EMILIA DA PAZ",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/MILENE EMILIA DA PAZ.jpg"
+            },
+            {
+                nome: "NUBIA MARIA LIMA COSTA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/NUBIA MARIA LIMA COSTA.jpg"
+            },
+            {
+                nome: "PAULO CESÁR DO NASCIMENTO PEREIRA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/PAULO CESÁR DO NASCIMENTO PEREIRA.jpg"
+            },
+            {
+                nome: "RAQUEL SALES SANTANA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/RAQUEL SALES SANTANA.jpg"
+            },
+            {
+                nome: "REGIANE GOMES DO NASCIMENTO",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/REGIANE GOMES DO NASCIMENTO.jpg"
+            },
+            {
+                nome: "RUTE ALVES ADEODATO",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/RUTE ALVES ADEODATO.jpg"
+            },
+            {
+                nome: "SAMELA APARECIDA OLIVEIRA SOUZA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/SAMELA APARECIDA OLIVEIRA SOUZA.jpg"
+            },
+            {
+                nome: "SAMIA MARIA DE ALMEIDA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/SAMIA MARIA DE ALMEIDA.jpg"
+            },
+            {
+                nome: "SANDRA OLIVEIRA DA COSTA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/SANDRA OLIVEIRA DA COSTA.jpg"
+            },
+            {
+                nome: "SILVIA DE SOUSA FERREIRA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/SILVIA DE SOUSA FERREIRA.jpg"
+            },
+            {
+                nome: "SONIA MARIA DE ALMEIDA",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/SONIA MARIA DE ALMEIDA.jpg"
+            },
+            {
+                nome: "SUZANA MONTEIRO",
+                categoria: "ACS",
+                cargo: "Agente Comunitário de Saúde",
+                foto: "fotos/ACS/SUZANA MONTEIRO.jpg"
+            }
+
+        ];
+
+
+        // =========================================================
+        // ORDENAÇÃO
+        // =========================================================
+
+        /*
+         * Primeiro ACE, depois ACS.
+         * Dentro de cada grupo, ordem alfabética.
+         */
+
+        formandos.sort((a, b) => {
+
+            if (a.categoria !== b.categoria) {
+                return a.categoria === "ACE" ? -1 : 1;
+            }
+
+            return a.nome.localeCompare(
+                b.nome,
+                "pt-BR",
+                { sensitivity: "base" }
+            );
+        });
+
+
+        // =========================================================
+        // ELEMENTOS
+        // =========================================================
+
+        const conteudo = document.getElementById("conteudo-formando");
+        const foto = document.getElementById("foto-formando");
+        const nome = document.getElementById("nome-formando");
+        const cargo = document.getElementById("cargo-formando");
+        const ano = document.getElementById("ano-formando");
+
+
+        // =========================================================
+        // ESTADO
+        // =========================================================
+
+        let indiceAtual = 0;
+
+
+        // =========================================================
+        // MOSTRAR FORMANDO
+        // =========================================================
+
+        function mostrarFormando(indice) {
+
+            indiceAtual = indice;
+
+            const formando = formandos[indiceAtual];
+
+            conteudo.classList.add("trocando");
+
+            setTimeout(() => {
+
+                foto.src = formando.foto;
+                foto.alt = formando.nome;
+
+                nome.textContent = formando.nome;
+                cargo.textContent = formando.cargo;
+
+                conteudo.classList.remove("trocando");
+
+            }, 180);
+        }
+
+
+        // =========================================================
+        // PRÓXIMO
+        // =========================================================
+
+        function proximoFormando() {
+
+            indiceAtual++;
+
+            if (indiceAtual >= formandos.length) {
+                indiceAtual = 0;
+            }
+
+            mostrarFormando(indiceAtual);
+        }
+
+
+        // =========================================================
+        // ANTERIOR
+        // =========================================================
+
+        function formandoAnterior() {
+
+            indiceAtual--;
+
+            if (indiceAtual < 0) {
+                indiceAtual = formandos.length - 1;
+            }
+
+            mostrarFormando(indiceAtual);
+        }
+
+
+        // =========================================================
+        // TECLADO
+        // =========================================================
+
+        document.addEventListener("keydown", (event) => {
+
+            if (event.key === "ArrowRight") {
+
+                event.preventDefault();
+
+                proximoFormando();
+
+            }
+
+            else if (event.key === "ArrowLeft") {
+
+                event.preventDefault();
+
+                formandoAnterior();
+
+            }
+
+        });
+
+
+        // =========================================================
+        // PRIMEIRO FORMANDO
+        // =========================================================
+
+        mostrarFormando(0);
+
+    </script>
+
+</body>
+
+</html>
