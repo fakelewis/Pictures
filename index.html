@@ -9,8 +9,7 @@
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet">
 
     <link
@@ -81,12 +80,12 @@
                     },
 
                     spacing: {
-                        "margin-mobile": "24px",
-                        "gutter": "24px",
-                        "unit": "8px",
-                        "stack-lg": "48px",
-                        "stack-md": "32px",
-                        "margin-desktop": "80px"
+                        "margin-mobile": "1.375vw",
+                        "gutter": "1.375vw",
+                        "unit": "0.458vw",
+                        "stack-lg": "2.75vw",
+                        "stack-md": "1.833vw",
+                        "margin-desktop": "4.583vw"
                     },
 
                     fontFamily: {
@@ -101,59 +100,59 @@
 
                     fontSize: {
                         "body-md": [
-                            "18px",
+                            "1.032vw",
                             {
-                                lineHeight: "28px",
+                                lineHeight: "1.604vw",
                                 fontWeight: "400"
                             }
                         ],
 
                         "label-caps": [
-                            "14px",
+                            "0.802vw",
                             {
-                                lineHeight: "20px",
+                                lineHeight: "1.146vw",
                                 letterSpacing: "0.1em",
                                 fontWeight: "600"
                             }
                         ],
 
                         "headline-md": [
-                            "36px",
+                            "2.063vw",
                             {
-                                lineHeight: "44px",
+                                lineHeight: "2.521vw",
                                 fontWeight: "600"
                             }
                         ],
 
                         "display-lg": [
-                            "72px",
+                            "4.125vw",
                             {
-                                lineHeight: "80px",
+                                lineHeight: "4.583vw",
                                 letterSpacing: "-0.02em",
                                 fontWeight: "700"
                             }
                         ],
 
                         "headline-lg": [
-                            "48px",
+                            "2.75vw",
                             {
-                                lineHeight: "56px",
+                                lineHeight: "3.208vw",
                                 fontWeight: "600"
                             }
                         ],
 
                         "headline-lg-mobile": [
-                            "32px",
+                            "1.833vw",
                             {
-                                lineHeight: "40px",
+                                lineHeight: "2.292vw",
                                 fontWeight: "600"
                             }
                         ],
 
                         "body-lg": [
-                            "24px",
+                            "1.375vw",
                             {
-                                lineHeight: "36px",
+                                lineHeight: "2.063vw",
                                 fontWeight: "400"
                             }
                         ]
@@ -170,16 +169,12 @@
 
         .bg-pattern {
             background-image:
-                radial-gradient(
-                    circle at 10% 20%,
+                radial-gradient(circle at 10% 20%,
                     rgba(255, 222, 165, 0.05) 0%,
-                    transparent 20%
-                ),
-                radial-gradient(
-                    circle at 90% 80%,
+                    transparent 20%),
+                radial-gradient(circle at 90% 80%,
                     rgba(255, 222, 165, 0.05) 0%,
-                    transparent 20%
-                );
+                    transparent 20%);
         }
 
         /* =========================
@@ -188,34 +183,34 @@
 
         .moldura {
             position: absolute;
-            width: 350px;
-            height: 350px;
+            width: 22vw;
+            height: 22vw;
 
             pointer-events: none;
             z-index: 30;
         }
 
         .moldura-superior-esquerda {
-            top: 20px;
-            left: 20px;
+            top: 1.146vw;
+            left: 1.146vw;
             transform: rotate(90deg);
         }
 
         .moldura-superior-direita {
-            top: 20px;
-            right: 20px;
+            top: 1.146vw;
+            right: 1.146vw;
             transform: rotate(180deg);
         }
 
         .moldura-inferior-direita {
-            right: 20px;
-            bottom: 20px;
+            right: 1.146vw;
+            bottom: 1.146vw;
             transform: rotate(-90deg);
         }
 
         .moldura-inferior-esquerda {
-            left: 20px;
-            bottom: 20px;
+            left: 1.146vw;
+            bottom: 1.146vw;
         }
 
         /* =========================
@@ -233,8 +228,8 @@
 
         .nome-formando {
             font-family: "Source Serif 4";
-            font-size: 72px;
-            line-height: 88px;
+            font-size: 4.5vw;
+            line-height: 5.042vw;
             font-weight: 600;
             letter-spacing: -0.02em;
         }
@@ -247,36 +242,19 @@
     <!-- Projection Canvas -->
 
     <main
-        class="w-full max-w-[1920px] aspect-widescreen bg-primary relative overflow-hidden flex flex-col justify-between shadow-2xl rounded-xl border-4 border-secondary-fixed/20"
-    >
+        class="projection-canvas w-full aspect-widescreen bg-primary relative overflow-hidden flex flex-col justify-between shadow-2xl rounded-xl border-[0.229vw] border-secondary-fixed/20">
 
         <!-- =====================================================
              MOLDURA
              ===================================================== -->
 
-        <img
-            class="moldura moldura-superior-esquerda"
-            src="Moldura.svg"
-            alt=""
-        >
+        <img class="moldura moldura-superior-esquerda" src="Moldura.svg" alt="">
 
-        <img
-            class="moldura moldura-superior-direita"
-            src="Moldura.svg"
-            alt=""
-        >
+        <img class="moldura moldura-superior-direita" src="Moldura.svg" alt="">
 
-        <img
-            class="moldura moldura-inferior-direita"
-            src="Moldura.svg"
-            alt=""
-        >
+        <img class="moldura moldura-inferior-direita" src="Moldura.svg" alt="">
 
-        <img
-            class="moldura moldura-inferior-esquerda"
-            src="Moldura.svg"
-            alt=""
-        >
+        <img class="moldura moldura-inferior-esquerda" src="Moldura.svg" alt="">
 
 
         <!-- =====================================================
@@ -286,12 +264,12 @@
         <div class="absolute inset-0 bg-pattern pointer-events-none"></div>
 
         <div
-            class="absolute -bottom-[20%] -left-[10%] w-[50%] aspect-square rounded-full bg-primary-container opacity-50 blur-3xl"
-        ></div>
+            class="absolute -bottom-[20%] -left-[10%] w-[50%] aspect-square rounded-full bg-primary-container opacity-50 blur-3xl">
+        </div>
 
         <div
-            class="absolute -top-[20%] -right-[10%] w-[50%] aspect-square rounded-full bg-primary-container opacity-50 blur-3xl"
-        ></div>
+            class="absolute -top-[20%] -right-[10%] w-[50%] aspect-square rounded-full bg-primary-container opacity-50 blur-3xl">
+        </div>
 
 
         <!-- =====================================================
@@ -299,8 +277,7 @@
              ===================================================== -->
 
         <header
-            class="w-full pt-margin-desktop px-margin-desktop text-center relative z-10 flex flex-col items-center gap-unit"
-        >
+            class="header-formatura w-full pt-margin-desktop px-margin-desktop text-center relative z-10 flex flex-col items-center gap-unit">
 
             <h1 class="font-label-caps text-label-caps text-on-primary tracking-widest uppercase">
                 SOLENIDADE DE CONCLUSÃO DA 2ª TURMA
@@ -317,29 +294,19 @@
              MAIN CONTENT
              ===================================================== -->
 
-        <section
-            class="flex-1 flex items-center justify-center px-margin-desktop z-10 w-full relative"
-        >
+        <section class="flex-1 flex items-center justify-center px-margin-desktop z-10 w-full relative">
 
-            <div
-                id="conteudo-formando"
-                class="conteudo-formando w-full max-w-6xl flex items-center justify-center gap-24"
-            >
+            <div id="conteudo-formando"
+                class="conteudo-formando w-full max-w-[75vw] flex items-center justify-center gap-[5.5vw]">
 
                 <!-- ==============================
                      FOTO
                      ============================== -->
 
                 <div
-                    class="w-[500px] h-[500px] flex-shrink-0 bg-surface rounded-lg p-2 shadow-xl border-2 border-secondary-fixed/50"
-                >
+                    class="w-[32vw] h-[32vw] flex-shrink-0 bg-surface rounded-lg p-[0.458vw] shadow-xl border-[0.115vw] border-secondary-fixed/50">
 
-                    <img
-                        id="foto-formando"
-                        class="w-full h-full object-cover rounded object-center"
-                        src=""
-                        alt=""
-                    >
+                    <img id="foto-formando" class="w-full h-full object-cover rounded object-center" src="" alt="">
 
                 </div>
 
@@ -348,79 +315,63 @@
                      INFORMAÇÕES
                      ============================== -->
 
-                <div class="flex flex-col gap-6 max-w-2xl">
+                <div class="flex flex-col gap-[1.375vw] max-w-[38.5vw]">
 
                     <!-- Decorative Line -->
 
-                    <div class="flex items-center gap-4 w-full">
+                    <div class="flex items-center gap-[1vw] w-full">
 
-                        <div
-                            class="w-3 h-3 rounded-full bg-secondary-fixed shadow-[0_0_10px_rgba(255,222,165,0.8)]"
-                        ></div>
+                        <div class="w-[0.75vw] h-[0.75vw] rounded-full bg-secondary-fixed shadow-[0_0_0.573vw_rgba(255,222,165,0.8)]">
+                        </div>
 
-                        <div
-                            class="h-0.5 bg-gradient-to-r from-secondary-fixed to-transparent flex-1"
-                        ></div>
+                        <div class="h-[0.115vw] bg-gradient-to-r from-secondary-fixed to-transparent flex-1"></div>
 
                     </div>
 
 
                     <!-- Nome -->
 
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-[0.458vw]">
 
-                        <h3
-                            id="nome-formando"
-                            class="nome-formando font-headline-md text-on-primary uppercase"
-                        ></h3>
+                        <h3 id="nome-formando" class="nome-formando font-headline-md text-on-primary uppercase"></h3>
 
-                        <p
-                            id="cargo-formando"
-                            class="font-headline-md text-headline-md text-secondary-fixed"
-                        ></p>
+                        <p id="cargo-formando" class="font-headline-md text-headline-md text-secondary-fixed"></p>
 
                     </div>
 
 
                     <!-- Ano -->
 
-                    <div class="flex items-center gap-4 mt-4 w-full">
+                    <div class="flex items-center gap-[0.917vw] mt-[0.917vw] w-full">
 
-    <!-- Linha esquerda -->
-    <div class="flex items-center gap-4 flex-1">
-        <div
-            class="h-0.5 bg-gradient-to-r from-transparent to-secondary-fixed flex-1"
-        ></div>
+                        <!-- Linha esquerda -->
+                        <div class="flex items-center gap-[0.917vw] flex-1">
+                            <div class="h-[0.115vw] bg-gradient-to-r from-transparent to-secondary-fixed flex-1"></div>
 
-        <div
-            class="w-3 h-3 rounded-full bg-secondary-fixed shadow-[0_0_10px_rgba(255,222,165,0.8)]"
-        ></div>
-    </div>
+                            <div
+                                class="w-[0.75vw] h-[0.75vw] rounded-full bg-secondary-fixed shadow-[0_0_0.573vw_rgba(255,222,165,0.8)]">
+                            </div>
+                        </div>
 
 
-    <!-- Ano -->
-        <span
-            id="ano-formando"
-            class="font-headline-md text-headline-md text-secondary-fixed"
-        >
-            2026
-        </span>
+                        <!-- Ano -->
+                        <span id="ano-formando" class="font-headline-md text-headline-md text-secondary-fixed">
+                            2026
+                        </span>
 
 
-    <!-- Linha direita -->
-    <div class="flex items-center gap-4 flex-1">
+                        <!-- Linha direita -->
+                        <div class="flex items-center gap-[0.917vw] flex-1">
 
-        <div
-            class="w-3 h-3 rounded-full bg-secondary-fixed shadow-[0_0_10px_rgba(255,222,165,0.8)]"
-        ></div>
+                            <div
+                                class="w-[0.688vw] h-[0.688vw] rounded-full bg-secondary-fixed shadow-[0_0_0.573vw_rgba(255,222,165,0.8)]">
+                            </div>
 
-        <div
-            class="h-0.5 bg-gradient-to-r from-secondary-fixed to-transparent flex-1"
-        ></div>
+                            <div class="h-[0.115vw] bg-gradient-to-r from-secondary-fixed to-transparent flex-1"></div>
 
-    </div>
+                        </div>
 
-</div>
+                    </div>
 
                 </div>
 
@@ -433,9 +384,7 @@
              FOOTER
              ===================================================== -->
 
-        <footer
-            class="w-full pb-margin-desktop px-margin-desktop text-center relative z-10"
-        >
+        <footer class="w-full pb-margin-desktop px-margin-desktop text-center relative z-10">
 
             <p class="font-label-caps text-label-caps text-on-primary/60 tracking-[0.2em] uppercase">
                 SAÚDE COM AGENTE
